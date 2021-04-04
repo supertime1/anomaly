@@ -1,1 +1,67 @@
-<mxfile host="app.diagrams.net" modified="2021-04-04T17:25:42.404Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36" etag="v8Z-Ff8phSw72ADJ5eUi" version="14.4.8" type="github"><diagram id="5DPVJdUh3_sVZ_NWn-OQ" name="Page-1">dZHLDoIwEEW/pvvS+toj6sYVC9cNHWmTwpBSA/r1QhjEBk26mJ5755EZJtOqP3vVmCtqcExw3TN5ZEIkGyHY+Lh+TmS/I1B6q8m0gNy+gCAn+rAa2sgYEF2wTQwLrGsoQsSU99jFtju6uGujSliBvFBuTW9WB0M04XwRLmBLQ60PWxIqNZsJtEZp7L6QzJhMPWKYoqpPwY3Lm/cy5Z3+qJ/BPNThR8IQLLWHT3Qhmb0B</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-04-04T18:03:59.523Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36" etag="444nY6jFNtjgIRdJi3Hs" version="14.4.8" type="github">
+  <diagram id="5DPVJdUh3_sVZ_NWn-OQ" name="Page-1">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WR26YYRXFiIJzQrf1X1c-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WR26YYRXFiIJzQrf1X1c-1" target="WR26YYRXFiIJzQrf1X1c-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WR26YYRXFiIJzQrf1X1c-1" value="Sonova Data Lake&lt;br&gt;(Historical biomarkers: RHR, Step accounts, HRV etc.)" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="680" y="100" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WR26YYRXFiIJzQrf1X1c-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WR26YYRXFiIJzQrf1X1c-3" target="WR26YYRXFiIJzQrf1X1c-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WR26YYRXFiIJzQrf1X1c-3" value="Data Segmentation" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="700" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WR26YYRXFiIJzQrf1X1c-5" value="e.g. Most recent 6-month data" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="850" y="260" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="WR26YYRXFiIJzQrf1X1c-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WR26YYRXFiIJzQrf1X1c-6" target="WR26YYRXFiIJzQrf1X1c-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WR26YYRXFiIJzQrf1X1c-6" value="Feature extraction and clustering" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="700" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WR26YYRXFiIJzQrf1X1c-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WR26YYRXFiIJzQrf1X1c-8" target="WR26YYRXFiIJzQrf1X1c-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WR26YYRXFiIJzQrf1X1c-8" value="Anomaly Behavior Patterns" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#b85450;fillColor=#f8cecc;" vertex="1" parent="1">
+          <mxGeometry x="700" y="510" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WR26YYRXFiIJzQrf1X1c-10" value="Anomaly detection algorithm &lt;br&gt;(e.g. Gaussian Mixture (GM),&lt;br&gt;Bayesian GM, PCA, &lt;br&gt;Isolation Forest etc.)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="850" y="380" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WR26YYRXFiIJzQrf1X1c-11" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;Anomaly Pattern Extraction&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="645" y="60" width="230" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="WR26YYRXFiIJzQrf1X1c-12" value="&lt;span style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;Data Streaming&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="340" y="60" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="WR26YYRXFiIJzQrf1X1c-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WR26YYRXFiIJzQrf1X1c-13" target="WR26YYRXFiIJzQrf1X1c-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WR26YYRXFiIJzQrf1X1c-13" value="HI with biosensors" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="345" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WR26YYRXFiIJzQrf1X1c-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WR26YYRXFiIJzQrf1X1c-15" target="WR26YYRXFiIJzQrf1X1c-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WR26YYRXFiIJzQrf1X1c-15" value="Biomarker acquisition on a daily basis" style="whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="345" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WR26YYRXFiIJzQrf1X1c-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WR26YYRXFiIJzQrf1X1c-17" target="WR26YYRXFiIJzQrf1X1c-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WR26YYRXFiIJzQrf1X1c-17" value="Matching Algorithm" style="whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="345" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WR26YYRXFiIJzQrf1X1c-22" value="Anomaly Behavior Recoginition" style="whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="345" y="660" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
