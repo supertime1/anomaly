@@ -6,18 +6,19 @@ from sklearn.mixture import GaussianMixture
 import pandas as pd
 
 
+
 def train(model_name):
 
-    train_set = pd.read_csv('data/train.csv')
+    train_set = pd.read_csv('data/training.csv')
     print('Loading data file successfully!\n')
-    # heart_labels = train_set['target'].copy()
-    heart = train_set.drop('target', axis=1)
+    breast_X = train_set.drop(['id', 'class'], axis=1)
+
 
     # don't need data normalization
     model_dic = {'gm': models.gaussian_mixture(),
                  'bgm': models.bayesian_gm(),
                  'pca': models.pca(),
-                 'iso': models.iso_tree(),
+                 'iso': models.iso_forest(),
                  }
 
     config_file = model_dic[model_name]
@@ -35,10 +36,10 @@ def train(model_name):
                         gm = GaussianMixture(n_components=n_component,
                                              covariance_type=cov_type,
                                              n_init=n_init)
-                        gm.fit(heart)
+                        gm.fit(breast_X)
 
-                        mlflow.log_param("bic", gm.bic(heart))
-                        mlflow.sklearn.log_model(gm, 'gm_model')
+                        mlflow.log_param("bic", gm.bic(breast_X))
+                        mlflow.sklearn.log_model('gm_model', gm)
 
 
 if __name__ == '__main__':
