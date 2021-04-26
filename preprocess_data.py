@@ -3,6 +3,10 @@ import numpy as np
 import argparse
 import os
 
+"""
+breast_cancer: https://www.kaggle.com/roustekbio/breast-cancer-csv
+"""
+
 def preprocess_data(data_path, normal_ratio, anom_ratio, ds_name):
     """
 
@@ -79,9 +83,9 @@ if __name__ == '__main__':
     parser.add_argument('--dir', action='store', help='dataset path',
                         default='breast_cancer/data', type=str)
     parser.add_argument('--n', action='store', help='input normal_ratio',
-                        default=1.0, type=float)
+                        default=0.9, type=float)
     parser.add_argument('--an', action='store', help='input anom_ratio',
-                        default=0.05, type=float)
+                        default=0.03, type=float)
     parser.add_argument('--ds', action='store', help='dataset name',
                         default='breast_cancer', type=str)
 

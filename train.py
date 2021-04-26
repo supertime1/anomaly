@@ -5,6 +5,7 @@ import numpy as np
 from sklearn.mixture import GaussianMixture, BayesianGaussianMixture
 import pandas as pd
 import os
+import sklearn
 
 
 def train(model_name, ds_name):
@@ -57,14 +58,17 @@ def train(model_name, ds_name):
 
     print(best_model.get_params())
 
-    def evaluate_model(ds_X, ds_Y, anomaly_label: int):
+    def evaluate_model(ds_X, ds_Y, anomaly_label: int, train: bool):
+        global DENSITY_THRESHOLD
         densities = best_model.score_samples(ds_X)
-        density_threshold = np.percentile(densities, 3)
-        pred_anomaly = np.where(densities < density_threshold)
+        if train:
+            DENSITY_THRESHOLD = np.percentile(densities, 3)
+        pred_anomaly = np.where(densities < DENSITY_THRESHOLD)
         true_anomaly = np.where(ds_Y == anomaly_label)
         pred_anomaly = np.array(pred_anomaly)[0]
         true_anomaly = np.array(true_anomaly)[0]
 
+        auc_score = sklearn.metrics.roc_auc_score(ds_Y, densities)
         tp = fp = 0
         for pred in pred_anomaly:
             if pred in true_anomaly:
@@ -77,17 +81,17 @@ def train(model_name, ds_name):
         precision = round(tp / (tp + fp), 2)
         recall = round(tp / (tp + fn), 2)
 
-        return accuracy, precision, recall
+        return accuracy, precision, recall, auc_score
 
     # evaluate on training data
-    train_acc, train_pre, train_rec = evaluate_model(train_X, train_Y, 4)
+    train_acc, train_pre, train_rec = evaluate_model(train_X, train_Y, 4, True)
     print('\nEvaluation on TRAINING data... \n')
     print(f'accuracy {train_acc}')
     print(f'precision {train_pre}')
     print(f'recall {train_rec}')
 
     # evaluate on testing data
-    test_acc, test_pre, test_rec = evaluate_model(test_X, test_Y, 4)
+    test_acc, test_pre, test_rec = evaluate_model(test_X, test_Y, 4, False)
     print('\nEvaluation on TESTING data... \n')
     print(f'accuracy {test_acc}')
     print(f'precision {test_pre}')
