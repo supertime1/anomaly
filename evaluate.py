@@ -11,10 +11,10 @@ def evaluate():
     print('\nLoading test data file successfully!\n')
     test_X = test_set.drop(['index', 'id', 'class'], axis=1)
     test_Y = test_set['class'].copy()
+    print(f'There are in total {len(test_X)} files in test data!\n')
 
     # import train set to calculate density threshold
     train_set = pd.read_csv('data/training.csv')
-    print('Loading test data file successfully!\n')
     train_X = train_set.drop(['index', 'id', 'class'], axis=1)
 
     train_densities = best_model.score_samples(train_X)
